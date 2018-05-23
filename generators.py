@@ -12,7 +12,7 @@ class Fibonacci:
     def next(self):
         self.generator.next()
 
-F = Fibonacci()
+F = Fibonacci(100)
 x = F.generator(10)
 print(F.lst_fib)
 print(list(F.generator(100)))

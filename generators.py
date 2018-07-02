@@ -10,17 +10,32 @@ class Fibonacci:
             yield fib1
 
     def next(self):
-        self.generator.next()
+         next(self.generator)
 
 F = Fibonacci(100)
 x = F.generator(10)
 print(F.lst_fib)
-print(list(F.generator(100)))
-print(next(x))
-print(next(x))
-print(next(x))
-print(next(x))
-print(next(x))
-print(next(x))
-print(next(x))
-print(next(x))
+
+class TestInit:
+
+    def test_gen1(self):
+        assert(next(x)==0)
+
+    def test_gen2(self):
+        assert(next(x)==1)
+
+    def test_gen3(self):
+        assert(next(x)==1)
+
+    def test_gen4(self):
+        assert(next(x)==2)
+
+    def test_gen5(self):
+        assert(next(x)==3)
+
+    def test_gen6(self):
+        assert(next(x)==5)
+
+    def test_gen7(self):
+        assert(next(x)==8)
+

@@ -1,3 +1,5 @@
+import pytest
+
 class Fibonacci:
     def __init__(self,n):
         self.lst_fib = (lambda n, fib=[0,1]: fib[:n]+[fib.append(fib[-1] + fib[-2]) or fib[-1] for i in range(n-len(fib))])(n)
